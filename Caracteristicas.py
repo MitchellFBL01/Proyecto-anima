@@ -36,9 +36,8 @@ def show_AGI(event):
     show_AGI = 0
     show_AGI = sd.askinteger(parent=hoja_prima, title="Agilidad", prompt="AGI", initialvalue=0)
     while show_AGI is None or show_AGI < 0:
+        show_AGI = 0
 
-        show_AGI = sd.askinteger(parent=hoja_prima, title="Agilidad", prompt="AGI", initialvalue=0)
-   
     if show_AGI >= 0:
         input_AGI(show_AGI)
         agi_lb2.config(text=show_AGI)
@@ -53,10 +52,9 @@ def show_CON(event):
     # Crear un cuadro de diálogo personalizado con un lb2ry usando la clase lb2ryDialog
     show_CON = 0
     show_CON = sd.askinteger(parent=hoja_prima, title="Constitucion", prompt="CON", initialvalue=0)
-    while show_CON is None or show_CON < 0:
+    while show_AGI is None or show_AGI < 0:
+        show_AGI = 0
 
-        show_CON = sd.askinteger(parent=hoja_prima, title="Constitucion", prompt="CON", initialvalue=0)
-    
     if show_CON >= 0:
         input_CON(show_CON)
         con_lb2.config(text=show_CON)
@@ -72,10 +70,9 @@ def show_DES(event):
     # Crear un cuadro de diálogo personalizado con un lb2ry usando la clase lb2ryDialog
     show_DES = 0
     show_DES = sd.askinteger(parent=hoja_prima, title="Destreza", prompt="DES", initialvalue=0)
-    while show_DES is None or show_DES < 0:
+    while show_AGI is None or show_AGI < 0:
+        show_AGI = 0
 
-        show_DES = sd.askinteger(parent=hoja_prima, title="Destreza", prompt="DES", initialvalue=0)
-    
     if show_DES >= 0:
         input_DES(show_DES)
         des_lb2.config(text=show_DES)
@@ -90,9 +87,8 @@ def show_FUE(event):
     # Crear un cuadro de diálogo personalizado con un lb2ry usando la clase lb2ryDialog
     show_FUE = 0
     show_FUE = sd.askinteger(parent=hoja_prima, title="Fuerza", prompt="FUE", initialvalue=0)
-    while show_FUE is None or show_FUE < 0:
-
-        show_FUE = sd.askinteger(parent=hoja_prima, title="Fuerza", prompt="FUE", initialvalue=0)
+    while show_AGI is None or show_AGI < 0:
+        show_AGI = 0
     
     if show_FUE >= 0:
         input_FUE(show_FUE)
@@ -108,9 +104,8 @@ def show_INT(event):
     # Crear un cuadro de diálogo personalizado con un lb2ry usando la clase lb2ryDialog
     show_INT = 0
     show_INT = sd.askinteger(parent=hoja_prima, title="Inteligencia", prompt="INT", initialvalue=0)
-    while show_INT is None or show_INT < 0:
-
-        show_INT = sd.askinteger(parent=hoja_prima, title="Inteligencia", prompt="INT", initialvalue=0)
+    while show_AGI is None or show_AGI < 0:
+        show_AGI = 0
     
     if show_INT >= 0:
         input_INT(show_INT)
@@ -126,9 +121,8 @@ def show_PER(event):
     # Crear un cuadro de diálogo personalizado con un lb2ry usando la clase lb2ryDialog
     show_PER = 0
     show_PER = sd.askinteger(parent=hoja_prima, title="Percepcion", prompt="PER", initialvalue=0)
-    while show_PER is None or show_PER < 0:
-
-        show_PER = sd.askinteger(parent=hoja_prima, title="Percepcion", prompt="PER", initialvalue=0)
+    while show_AGI is None or show_AGI < 0:
+        show_AGI = 0
     
     if show_PER >= 0:
         input_PER(show_PER)
@@ -144,9 +138,8 @@ def show_POD(event):
     # Crear un cuadro de diálogo personalizado con un lb2ry usando la clase lb2ryDialog
     show_POD = 0
     show_POD = sd.askinteger(parent=hoja_prima, title="Poder", prompt="POD", initialvalue=0)
-    while show_POD is None or show_POD < 0:
-
-        show_POD = sd.askinteger(parent=hoja_prima, title="Poder", prompt="POD", initialvalue=0)
+    while show_AGI is None or show_AGI < 0:
+        show_AGI = 0
     
     if show_POD >= 0:
         input_POD(show_POD)
@@ -162,9 +155,8 @@ def show_VOL(event):
     # Crear un cuadro de diálogo personalizado con un lb2ry usando la clase lb2ryDialog
     show_VOL = 0
     show_VOL = sd.askinteger(parent=hoja_prima, title="Voluntad", prompt="VOL", initialvalue=0)
-    while show_VOL is None or show_VOL < 0:
-
-        show_VOL = sd.askinteger(parent=hoja_prima, title="Voluntad", prompt="VOL", initialvalue=0)
+    while show_AGI is None or show_AGI < 0:
+        show_AGI = 0
     
     if show_VOL >= 0:
         input_VOL(show_VOL)
@@ -409,7 +401,7 @@ caracteristcas_fm.grid(column=0, row=0)
 
 
 #Label caracteristica
-titleAtributes_lb = ttk.Label(caracteristcas_fm, text="Atributos", relief = "groove")
+titleAtributes_lb = ttk.Label(caracteristcas_fm, text=" Atributos", relief = "groove")
 totalAtributes_lb = ttk.Label(caracteristcas_fm)
 agi_lb = ttk.Label(caracteristcas_fm, width=5, text="  AGI", borderwidth=2, relief="raised")
 con_lb = ttk.Label(caracteristcas_fm, width=5, text=" CON", borderwidth=2, relief="raised")
@@ -433,14 +425,14 @@ vol_lb.grid(column=0, row=9, padx= 5, pady= 4, ipadx= 2, ipady= 1)
 
 #lb2ry caracteristicas
 base_la2 = ttk.Label(caracteristcas_fm, text="Base")
-agi_lb2 = ttk.Label(caracteristcas_fm, width=3)
-con_lb2 = ttk.Label(caracteristcas_fm, width=3)
-des_lb2 = ttk.Label(caracteristcas_fm, width=3)
-fue_lb2 = ttk.Label(caracteristcas_fm, width=3)
-int_lb2 = ttk.Label(caracteristcas_fm, width=3)
-per_lb2 = ttk.Label(caracteristcas_fm, width=3)
-pod_lb2 = ttk.Label(caracteristcas_fm, width=3)
-vol_lb2 = ttk.Label(caracteristcas_fm, width=3)
+agi_lb2 = ttk.Label(caracteristcas_fm, width=3, relief="groove")
+con_lb2 = ttk.Label(caracteristcas_fm, width=3, relief="groove")
+des_lb2 = ttk.Label(caracteristcas_fm, width=3, relief="groove")
+fue_lb2 = ttk.Label(caracteristcas_fm, width=3, relief="groove")
+int_lb2 = ttk.Label(caracteristcas_fm, width=3, relief="groove")
+per_lb2 = ttk.Label(caracteristcas_fm, width=3, relief="groove")
+pod_lb2 = ttk.Label(caracteristcas_fm, width=3, relief="groove")
+vol_lb2 = ttk.Label(caracteristcas_fm, width=3, relief="groove")
 
 base_la2.grid(column= 1, row=1)
 agi_lb2.grid(column= 1, row=2, pady=2, padx=2)
@@ -452,23 +444,15 @@ per_lb2.grid(column= 1, row=7, pady=2, padx=2)
 pod_lb2.grid(column= 1, row=8, pady=2, padx=2)
 vol_lb2.grid(column= 1, row=9, pady=2, padx=2)
 
-# agi_lb2.bind('<BackSpace>', lambda x : agi_lb2.delete(0, Tk.END))
-# con_lb2.bind('<BackSpace>', lambda x : con_lb2.delete(0, Tk.END))
-# des_lb2.bind('<BackSpace>', lambda x : des_lb2.delete(0, Tk.END))
-# fue_lb2.bind('<BackSpace>', lambda x : fue_lb2.delete(0, Tk.END))
-# int_lb2.bind('<BackSpace>', lambda x : int_lb2.delete(0, Tk.END))
-# per_lb2.bind('<BackSpace>', lambda x : per_lb2.delete(0, Tk.END))
-# pod_lb2.bind('<BackSpace>', lambda x : pod_lb2.delete(0, Tk.END))
-# vol_lb2.bind('<BackSpace>', lambda x : vol_lb2.delete(0, Tk.END))
 
-agi_lb.bind("<Button-1>", show_AGI)
-con_lb.bind("<Button-1>", show_CON)
-des_lb.bind("<Button-1>", show_DES)
-fue_lb.bind("<Button-1>", show_FUE)
-int_lb.bind("<Button-1>", show_INT)
-per_lb.bind("<Button-1>", show_PER)
-pod_lb.bind("<Button-1>", show_POD)
-vol_lb.bind("<Button-1>", show_VOL)
+agi_lb2.bind("<Button-1>", show_AGI)
+con_lb2.bind("<Button-1>", show_CON)
+des_lb2.bind("<Button-1>", show_DES)
+fue_lb2.bind("<Button-1>", show_FUE)
+int_lb2.bind("<Button-1>", show_INT)
+per_lb2.bind("<Button-1>", show_PER)
+pod_lb2.bind("<Button-1>", show_POD)
+vol_lb2.bind("<Button-1>", show_VOL)
 
 #Label Bono
 bono_la3 = ttk.Label(caracteristcas_fm, text="Bono")
